@@ -646,7 +646,7 @@ while True:
             yesNo = input()
             if yesNo == 'yes':
                 charList[i].append('young')
-                if ('human' not in charList[i]) or ('humanoid' not in charList[i][0]):
+                if ('human' not in charList[i]) or ('humanoid' not in charList[i]):
                     while True:
                         print("Is " + charList[i][0] + " a cub? (yes/no/?)")
                         yesNo = input()
@@ -2012,8 +2012,8 @@ while True:
             yesNo = input()
             if yesNo == 'yes':
                 charList[i].append('pigtails')
-                while True:
-                    if 'briaded hair' in charList[i]:
+                if 'briaded hair' in charList[i]:
+                    while True:
                         print("Does " + charList[i][0] + " have twin braids? (yes/no/?)")
                         yesNo = input()
                         if yesNo == 'yes':
@@ -3195,7 +3195,7 @@ while True:
                         break
                     if yesNo == '?':
                         print("Characters that are dressed in clothing that is notably tight, revealing (midriff, cleavage), suggestive, or otherwise accentuating a character's sexual proclivity.")
-                if 'breasts' in charList[i][0]:
+                if 'breasts' in charList[i]:
                     while True:
                         print("Is " + charList[i][0] + " showing cleavage? (yes/no/?)")
                         yesNo = input()
@@ -3310,16 +3310,21 @@ while True:
                             tags.append('herm/male')
                         if 'maleherm' in charCombo[i][1]:
                             tags.append('maleherm/male')
-                    if 'anthro' in charCombo[i][1]:
-                        tags.append('male on anthro')
-                    if 'feral' in charCombo[i][1]:
-                        tags.append('male on feral')
-                    if 'human' in charCombo[i][1]:
-                        tags.append('male on human')
-                    if 'humanoid' in charCombo[i][1]:
-                        tags.append('male on humanoid')
-                    if 'taur' in charCombo[i][1]:
-                        tags.append('male on taur')
+                    if ('anthro' not in charCombo[i][0]) and ('anthro' not in charCombo[i][1]):
+                        if 'anthro' in charCombo[i][1]:
+                            tags.append('male on anthro')
+                    if ('feral' not in charCombo[i][0]) and ('feral' not in charCombo[i][1]):
+                        if 'feral' in charCombo[i][1]:
+                            tags.append('male on feral')
+                    if ('human' not in charCombo[i][0]) and ('human' not in charCombo[i][1]):
+                        if 'human' in charCombo[i][1]:
+                            tags.append('male on human')
+                    if ('humanoid' not in charCombo[i][0]) and ('humanoid' not in charCombo[i][1]):
+                        if 'humanoid' in charCombo[i][1]:
+                            tags.append('male on humanoid')
+                    if ('taur' not in charCombo[i][0]) and ('taur' not in charCombo[i][1]):
+                        if 'taur' in charCombo[i][1]:
+                            tags.append('male on taur')
                 if 'female' in charCombo[i][0]:
                     if 'male' in charCombo[i][1]:
                         tags.append('male/female')
@@ -3347,16 +3352,21 @@ while True:
                             tags.append('herm/female')
                         if 'maleherm' in charCombo[i][1]:
                             tags.append('maleherm/female')
-                    if 'anthro' in charCombo[i][1]:
-                        tags.append('female on anthro')
-                    if 'feral' in charCombo[i][1]:
-                        tags.append('female on feral')
-                    if 'human' in charCombo[i][1]:
-                        tags.append('female on human')
-                    if 'humanoid' in charCombo[i][1]:
-                        tags.append('female on humanoid')
-                    if 'taur' in charCombo[i][1]:
-                        tags.append('female on taur')
+                    if ('anthro' not in charCombo[i][0]) and ('anthro' not in charCombo[i][1]):
+                        if 'anthro' in charCombo[i][1]:
+                            tags.append('female on anthro')
+                    if ('feral' not in charCombo[i][0]) and ('feral' not in charCombo[i][1]):
+                        if 'feral' in charCombo[i][1]:
+                            tags.append('female on feral')
+                    if ('human' not in charCombo[i][0]) and ('anthumanhro' not in charCombo[i][1]):
+                        if 'human' in charCombo[i][1]:
+                            tags.append('female on human')
+                    if ('humanoid' not in charCombo[i][0]) and ('humanoid' not in charCombo[i][1]):
+                        if 'humanoid' in charCombo[i][1]:
+                            tags.append('female on humanoid')
+                    if ('taur' not in charCombo[i][0]) and ('taur' not in charCombo[i][1]):
+                        if 'taur' in charCombo[i][1]:
+                            tags.append('female on taur')
                 if 'ambiguous gender' in charCombo[i][0]:
                     if 'male' in charCombo[i][1]:
                         tags.append('male/ambiguous')
@@ -3374,27 +3384,37 @@ while True:
                             tags.append('herm/ambiguous')
                         if 'maleherm' in charCombo[i][1]:
                             tags.append('maleherm/ambiguous')
-                    if 'anthro' in charCombo[i][1]:
-                        tags.append('ambiguous on anthro')
-                    if 'feral' in charCombo[i][1]:
-                        tags.append('ambiguous on feral')
-                    if 'human' in charCombo[i][1]:
-                        tags.append('ambiguous on human')
-                    if 'humanoid' in charCombo[i][1]:
-                        tags.append('ambiguous on humanoid')
-                    if 'taur' in charCombo[i][1]:
-                        tags.append('ambiguous on taur')
+                    if ('anthro' not in charCombo[i][0]) and ('anthro' not in charCombo[i][1]):
+                        if 'anthro' in charCombo[i][1]:
+                            tags.append('ambiguous on anthro')
+                    if ('feral' not in charCombo[i][0]) and ('feral' not in charCombo[i][1]):
+                        if 'feral' in charCombo[i][1]:
+                            tags.append('ambiguous on feral')
+                    if ('human' not in charCombo[i][0]) and ('human' not in charCombo[i][1]):
+                        if 'human' in charCombo[i][1]:
+                            tags.append('ambiguous on human')
+                    if ('humanoid' not in charCombo[i][0]) and ('humanoid' not in charCombo[i][1]):
+                        if 'humanoid' in charCombo[i][1]:
+                            tags.append('ambiguous on humanoid')
+                    if ('taur' not in charCombo[i][0]) and ('taur' not in charCombo[i][1]):
+                        if 'taur' in charCombo[i][1]:
+                            tags.append('ambiguous on taur')
                 if 'intersex' in charCombo[i][0]:
-                    if 'anthro' in charCombo[i][1]:
-                        tags.append('intersex on anthro')
-                    if 'feral' in charCombo[i][1]:
-                        tags.append('intersex on feral')
-                    if 'human' in charCombo[i][1]:
-                        tags.append('intersex on human')
-                    if 'humanoid' in charCombo[i][1]:
-                        tags.append('intersex on humanoid')
-                    if 'taur' in charCombo[i][1]:
-                        tags.append('intersex on taur')
+                    if ('anthro' not in charCombo[i][0]) and ('anthro' not in charCombo[i][1]):
+                        if 'anthro' in charCombo[i][1]:
+                            tags.append('intersex on anthro')
+                    if ('feral' not in charCombo[i][0]) and ('feral' not in charCombo[i][1]):
+                        if 'feral' in charCombo[i][1]:
+                            tags.append('intersex on feral')
+                    if ('human' not in charCombo[i][0]) and ('human' not in charCombo[i][1]):
+                        if 'human' in charCombo[i][1]:
+                            tags.append('intersex on human')
+                    if ('humanoid' not in charCombo[i][0]) and ('humanoid' not in charCombo[i][1]):
+                        if 'humanoid' in charCombo[i][1]:
+                            tags.append('intersex on humanoid')
+                    if ('taur' not in charCombo[i][0]) and ('taur' not in charCombo[i][1]):
+                        if 'taur' in charCombo[i][1]:
+                            tags.append('intersex on taur')
                 if 'dickgirl' in charCombo[i][0]:
                     if 'male' in charCombo[i][1]:
                         tags.append('dickgirl/male')
@@ -4091,7 +4111,7 @@ while True:
             if yesNo == '?':
                 print("Images or Animations in which a character's leg is raised up or away from the body, usually revealing genitalia. ")
         while True:
-            print("Is " + charList[i][0] + " recling? (yes/no/?)")
+            print("Is " + charList[i][0] + " reclining? (yes/no/?)")
             yesNo = input()
             if yesNo == 'yes':
                 charList[i].append('reclining')
@@ -4604,9 +4624,22 @@ while True:
             if yesNo == '?':
                 print("All cases where a character is sexually stimulating themselves (penis, balls, anus, pussy, urethra, or cloaca).")
     
+    
+    
     #===========================================================================
     # Sex acts
     #===========================================================================
+    if len(charList) >= 2:
+        while True:
+            print("Are any characters having sex?")
+            yesNo = input()
+            if yesNo == 'yes':
+                tags.append('sex')
+                break
+            if yesNo == 'no':
+                break
+            if yesNo == '?':
+                print("Images or animations depicting any kind of sexual activity between two or more characters of any description.") 
     if 'sex' in tags:
         if 'clothed' in tags:
             while True:
